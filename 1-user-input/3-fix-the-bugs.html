@@ -17,11 +17,12 @@
     const repetitions = prompt('... and how many times to repeat it');
 
     // program logic
+
     let repeated = '';
-    let i = 0;
-    while (i !== repetitions) {
-      repeated += stringToRepeat;
-      i++;
+      let i = 0;
+      while (i < repetitions) {
+        repeated += stringToRepeat;
+        i++;
     }
 
     // respond to user
