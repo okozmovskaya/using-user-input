@@ -16,15 +16,15 @@
       // no need to check the argument types, they can be anything!
 
       let comparison;
-      if (typeof valueA === typeof valueB) {
-        comparison += 'different types';
-      } if (valueA === valueB) {
-        comparison += 'same type, different values';
+      if (valueA === valueB) {
+        comparison = 'strictly equal ';
+      } else if (typeof valueA === typeof valueB ) {
+        comparison = 'same type, different values';
       } else {
-        comparison += 'strictly equal'
+        comparison = 'different types'
       }
 
-      if (typeof comparison !== 'boolean') { throw new TypeError() };
+      if (typeof comparison !== 'string') { throw new TypeError() };
       return comparison;
     }
 

@@ -13,12 +13,12 @@
      * @param {string} noun
      * @returns {string}
      */
-    function generateMadlib(verb, adjective, noun) {
+    function generateMadlib(adjective, verb, noun) {
       if (typeof adjective !== 'String') { throw new TypeError(); }
       if (typeof verb !== 'String') { throw new TypeError(); }
       if (typeof noun !== 'String') { throw new TypeError(); }
 
-      const madlib = `On a {adjective} morning, never {noun} if you can see a {verb}`;
+      const madlib = `On a ${adjective} morning, never ${verb} if you can see a ${noun}`;
 
       if (typeof madlib !== 'String') { throw new TypeError() };
       return madlib;
